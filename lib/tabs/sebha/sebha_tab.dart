@@ -11,13 +11,20 @@ class _SebhaTabState extends State<SebhaTab>
   int count = 0;
   late AnimationController _animationController;
   late Animation<double> _rotationAnimation;
+  List<String> phrases = [
+    'سبحان الله',
+    'الحمدلله',
+    'الله أكبر',
+    'لااله الاالله',
+  ];
+  int phraseIndex = 0;
 
   @override
   void initState() {
     super.initState();
 
     _animationController = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(milliseconds: 200),
       vsync: this,
     );
 
@@ -97,7 +104,7 @@ class _SebhaTabState extends State<SebhaTab>
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 30,
         ),
         Container(
           height: 51,
@@ -114,7 +121,7 @@ class _SebhaTabState extends State<SebhaTab>
             onPressed: addDigit,
             child: Center(
               child: Text(
-                'سبحان الله',
+                phrases[phraseIndex],
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 25,
@@ -129,6 +136,10 @@ class _SebhaTabState extends State<SebhaTab>
 
   void addDigit() {
     count += 1;
+    if (count > 33) {
+      count = 0;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
     setState(() {});
     _animationController.forward().then((_) {
       _animationController.reset();
