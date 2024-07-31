@@ -7,6 +7,7 @@ class AppTheme {
   static const Color black = Color(0xff242424);
 
   static ThemeData lightTheme = ThemeData(
+    primaryColor: lightPrimary,
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
       centerTitle: true,
