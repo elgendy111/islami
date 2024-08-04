@@ -14,7 +14,7 @@ class RadioTab extends StatelessWidget {
         ),
         Text(
           'إذاعة القرآن الكريم',
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         SizedBox(
           height: 30,

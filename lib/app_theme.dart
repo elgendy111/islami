@@ -5,6 +5,7 @@ class AppTheme {
   static const Color darkPrimary = Color(0xff141A2E);
   static const Color white = Color(0xffF8F8F8);
   static const Color black = Color(0xff242424);
+  static const Color gold = Color(0xffFACC1D);
 
   static ThemeData lightTheme = ThemeData(
     primaryColor: lightPrimary,
@@ -31,5 +32,32 @@ class AppTheme {
     ),
   );
 
-  static ThemeData darkTheme = ThemeData();
+  static ThemeData darkTheme = ThemeData(
+    primaryColor: darkPrimary,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      titleTextStyle:
+          TextStyle(color: white, fontSize: 30, fontWeight: FontWeight.bold),
+      foregroundColor: AppTheme.white,
+    ),
+    scaffoldBackgroundColor: Colors.transparent,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: darkPrimary,
+      type: BottomNavigationBarType.fixed,
+      selectedItemColor: gold,
+      unselectedItemColor: white,
+    ),
+    textTheme: TextTheme(
+      headlineSmall:
+          TextStyle(color: white, fontSize: 25, fontWeight: FontWeight.w400),
+      titleMedium:
+          TextStyle(color: gold, fontSize: 25, fontWeight: FontWeight.w600),
+      titleLarge:
+          TextStyle(color: gold, fontSize: 20, fontWeight: FontWeight.w400),
+    ),
+    switchTheme: SwitchThemeData(
+      thumbColor: MaterialStateProperty.all(white),
+    ),
+  );
 }

@@ -84,7 +84,7 @@ class _SebhaTabState extends State<SebhaTab>
         ),
         Text(
           'عدد التسبيحات',
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         SizedBox(
           height: 25,
@@ -99,7 +99,7 @@ class _SebhaTabState extends State<SebhaTab>
           child: Center(
             child: Text(
               '$count',
-              style: Theme.of(context).textTheme.titleMedium,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
         ),
