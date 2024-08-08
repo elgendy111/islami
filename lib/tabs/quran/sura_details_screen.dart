@@ -43,7 +43,8 @@ class _SuraDetalisScreenState extends State<SuraDetalisScreen> {
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
-            color: AppTheme.darkPrimary,
+            color:
+                settingsProvider.isDark ? AppTheme.darkPrimary : AppTheme.white,
           ),
           child: ayat.isEmpty
               ? Center(
